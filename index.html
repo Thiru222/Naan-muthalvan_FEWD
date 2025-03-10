@@ -1,150 +1,115 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Harvest Grocery Store</title>
+    <title>Juice Sales - Fresh & Healthy</title>
     <style>
-        body {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-            line-height: 1.6;
         }
-        .header {
-            background-color: #4CAF50;
-            color: white;
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
             text-align: center;
-            padding: 20px;
-            border-radius: 10px;
         }
-        .product-section {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .product-list {
+
+        header {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ff6600;
         }
-        .product-item {
-            background-color: #e8f5e9;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-            width: 48%;
+
+        .logo img {
+            width: 120px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        .form-section {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        .form-section input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .media-section {
+
+        nav ul {
+            list-style: none;
             display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
         }
-        .media-section video, .media-section audio {
-            width: 48%;
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .hero {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .hero img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            margin: 20px 0;
+            font-size: 36px;
+            color: #ff6600;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #cc5500;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Fresh Harvest Grocery Store</h1>
-    </div>
 
-    <div class="product-section">
-        <h2>Our Fresh Produce</h2>
-        <div class="product-list">
-            <div class="product-item">
-                <h3>Watermelon Juice</h3>
-                <p>Cool, delicious, and refreshing summer drink!</p>
-            </div>
-            <div class="product-item">
-                <h3>Fresh Fruits</h3>
-                <p>Locally sourced, farm-fresh fruits</p>
-            </div>
+    <header>
+        <div class="logo">
+            <img src="freshjuice.jpg" alt="Juice Sales Logo">
         </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <h2>Nutritional Facts</h2>
-        <table>
-            <tr>
-                <th>Nutrient</th>
-                <th>Per 100 ml</th>
-                <th>% RDA per serve</th>
-            </tr>
-            <tr>
-                <td>Energy</td>
-                <td>52 kcal</td>
-                <td>5.2%</td>
-            </tr>
-            <tr>
-                <td>Carbohydrate</td>
-                <td>13.5g</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>Total Sugar</td>
-                <td>12.8g</td>
-                <td>-</td>
-            </tr>
-        </table>
-    </div>
+    <section class="hero">
+        <img src="freshjuice1.jpg" alt="Fresh Juice">
+        <h1>Fresh & Natural Juices</h1>
+        <p>Enjoy the taste of nature with our freshly squeezed juices made from organic fruits.</p>
+        <button id="buy-now">Order Now</button>
+    </section>
 
-    <div class="form-section">
-        <h2>Join Our Loyalty Program</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <div>
-                Gender: 
-                <input type="radio" name="gender" id="male"> <label for="male">Male</label>
-                <input type="radio" name="gender" id="female"> <label for="female">Female</label>
-            </div>
-            <input type="submit" value="Join Now">
-        </form>
-    </div>
+    <script>
+        document.getElementById("buy-now").addEventListener("click", function () {
+            alert("Thank you for choosing our fresh juices! Your order has been placed.");
+        });
+    </script>
 
-    <div class="media-section">
-        <video controls>
-            <source src="https://youtu.be/DTEx0ohFyGg" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <audio controls>
-            <source src="/api/placeholder/400/100" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-    </div>
-
-    <div class="product-section">
-        <h2>Customer Reviews</h2>
-        <p>"Amazing fresh produce and delicious juices!" - John D.</p>
-        <p>"Best grocery store in town!" - Sarah M.</p>
-    </div>
 </body>
 </html>
